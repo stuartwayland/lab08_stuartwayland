@@ -12,8 +12,26 @@ using namespace std;
  * affect your result. 
  */
 bool isAnagram(string s1, string s2){
-  return true;
+
+int counter=0;
+
+	if (sizeof(s1) != sizeof(s2)){
+		return false;
+		exit();
 }
+	for(int i=0; s1.at(i)!=NULL; i++){
+		for(int j=0; s2.at(j) != NULL; j++){
+			if (s1.at(i) == s2.at(j)){
+				counter++;
+}
+}}
+	if (sizeof(s1) == counter){
+		return true;
+}	else{
+		return false;
+}}
+		
+ 
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
  * Postcondition: Returns true if s1 is a palindrome, false otherwise
