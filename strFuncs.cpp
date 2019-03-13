@@ -16,8 +16,8 @@ bool isAnagram(string s1, string s2){
 int counter=0;
 
 	if (sizeof(s1) != sizeof(s2)){
-		return false;
-		exit();
+		counter = 77;
+		
 }
 	for(int i=0; s1.at(i)!=NULL; i++){
 		for(int j=0; s2.at(j) != NULL; j++){
