@@ -2,7 +2,7 @@
 #include <string>
 #include <cstring>
 #include <algorithm>
-#include "strFuncs.h"
+#include <cctype>
 using namespace std;
 
 
@@ -12,25 +12,41 @@ using namespace std;
  * affect your result. 
  */
 bool isAnagram(string s1, string s2){
-
-int counter=0;
-
-	if (sizeof(s1) != sizeof(s2)){
-		counter = 77;
+	  
+	for (int i=0; i<sizeof(s1); i++){//iterates throught the string
+		if (ispunct(s1[i])==1){
+			remove(&s1[i]);// removes all punctiation from the string
+		if (s1[i]==' '){
+			remove(&s1[i]);// removes all whitespace from the string
+		}
+tolower(s1[i]);// changes all char to lower case
 		
-}
-	for(int i=0; s1.at(i)!=NULL; i++){
-		for(int j=0; s2.at(j) != NULL; j++){
-			if (s1.at(i) == s2.at(j)){
-				counter++;
-}
+		}}
+	
+sort(s1.begin(),s1.end());//sorts string into alphabetical 
+
+for (int i=0; i<sizeof(s2); i++){//iterates throught the string
+                if (ispunct(s2[i])==1){
+                        remove(&s2[i]);// removes all punctiation from the string
+                if (s2[i]==' '){
+                        remove(&s2[i]);// removes all whitespace from the string
+                }
+tolower(s2[i]);// changes all char to lower case
 }}
-	if (sizeof(s1) == counter){
-		return true;
-}	else{
-		return false;
-}}
-		
+sort(s2.begin(), s2.end());
+
+
+
+
+
+if(s1 == s2){
+
+return true;
+}
+else{
+return false;
+}
+}
  
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
@@ -38,7 +54,7 @@ int counter=0;
  *You should provide a recursive solution*/
 bool isPalindrome(const string s1){
 
-  return true;
+  return false;
 }
 
 
