@@ -27,7 +27,7 @@ START_TEST_GROUP("isAnagram");
 	string simple2 ("dcba");
 	string simple3 ("abcdd");
 	string test1 ("i am okay");
-	string test2 ("i am okay.");
+	string test2 ("i am okaY");
 	string test3 ("cat sat on the hat");
 	string test4 ("hats sat on the cat");
 
